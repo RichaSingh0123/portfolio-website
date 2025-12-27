@@ -1,0 +1,271 @@
+:root {
+  --bg: linear-gradient(135deg, #f4f6ff, #fdfbff);
+  --text: #1e293b;
+  --accent: #7c83ff;
+  --soft: rgba(124,131,255,0.08);
+  --card: #ffffff;
+}
+
+body.dark {
+  --bg: linear-gradient(135deg, #020617, #0f172a);
+  --text: #e5e7eb;
+  --card: rgba(255,255,255,0.08);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 60px;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.nav a {
+  margin: 0 18px;
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.nav a:hover {
+  color: var(--accent);
+}
+
+#themeToggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+/* HERO */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px;
+  gap: 40px;
+}
+
+.hero-text {
+  max-width: 520px;
+}
+
+.hero-text h1 span {
+  color: var(--accent);
+}
+
+.hero-text p {
+  margin: 16px 0;
+  line-height: 1.6;
+}
+.hero-education {
+  font-size: 14px;
+  color: var(--accent);
+  opacity: 0.9;
+}
+.hero-buttons {
+  margin-top: 36px; /* 👈 THIS creates visible space above buttons */
+}
+
+
+
+/* BUTTONS */
+.btn {
+  padding: 14px 36px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 500;
+  margin-right: 14px;
+  cursor: pointer;
+}
+
+.primary {
+  background: linear-gradient(135deg, #7c83ff, #a5b4fc);
+  color: white;
+}
+
+.secondary {
+  border: 2px solid var(--accent);
+  color: var(--accent);
+}
+
+/* IMAGE */
+.hero-image img {
+  width: 320px;
+  max-width: 90vw;
+  animation: float 6s ease-in-out infinite;
+  opacity: 0.96;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-14px); }
+  100% { transform: translateY(0); }
+}
+
+/* SECTIONS */
+.section {
+  padding: 70px 20px;
+  text-align: center;
+}
+
+.section.soft {
+  background: var(--soft);
+}
+
+/* PROJECTS */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+  gap: 25px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.project-card {
+  background: var(--card);
+  padding: 26px;
+  border-radius: 20px;
+  text-decoration: none;
+  color: inherit;
+  text-align: left;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 35px rgba(0,0,0,0.08);
+}
+
+.project-card span {
+  display: inline-block;
+  margin-top: 12px;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.weather { border-top: 4px solid #7dd3fc; }
+.todo { border-top: 4px solid #86efac; }
+.gallery { border-top: 4px solid #fcd34d; }
+
+/* EDUCATION */
+.education-card {
+  max-width: 700px;
+  margin: auto;
+  background: var(--card);
+  padding: 30px;
+  border-radius: 22px;
+}
+
+.edu-item {
+  margin-bottom: 28px;
+}
+
+.edu-item:last-child {
+  margin-bottom: 0;
+}
+
+.education-card h3 {
+  color: var(--accent);
+  margin-bottom: 6px;
+}
+
+.edu-college {
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.edu-year {
+  font-size: 14px;
+  opacity: 0.8;
+  margin-bottom: 8px;
+}
+
+.edu-desc {
+  line-height: 1.6;
+}
+
+
+/* SKILLS */
+.skills span {
+  display: inline-block;
+  margin: 8px;
+  padding: 10px 18px;
+  background: linear-gradient(135deg, #7c83ff, #a5b4fc);
+  color: white;
+  border-radius: 20px;
+}
+/* CONTACT INFO */
+.contact-card {
+  max-width: 420px;
+  margin: auto;
+  background: var(--card);
+  padding: 30px;
+  border-radius: 22px;
+  text-align: left;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 16px;
+  font-size: 16px;
+}
+
+.contact-item:last-child {
+  margin-bottom: 0;
+}
+
+.contact-item a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.contact-item a:hover {
+  color: var(--accent);
+}
+
+.contact-icon {
+  font-size: 18px;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  opacity: 0.7;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+.portfolio {
+  border-top: 4px solid #a5b4fc;
+}
+
