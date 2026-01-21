@@ -83,7 +83,7 @@ body {
   opacity: 0.9;
 }
 .hero-buttons {
-  margin-top: 36px; /* 👈 THIS creates visible space above buttons */
+  margin-top: 36px; 
 }
 
 
@@ -263,5 +263,6 @@ footer {
 .portfolio {
   border-top: 4px solid #a5b4fc;
 }
+
 
 
