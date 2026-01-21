@@ -24,7 +24,7 @@ body {
   color: var(--text);
 }
 
-/* HEADER */
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -57,7 +57,6 @@ body {
   font-size: 18px;
 }
 
-/* HERO */
 .hero {
   display: flex;
   align-items: center;
@@ -88,8 +87,6 @@ body {
 }
 
 
-
-/* BUTTONS */
 .btn {
   padding: 14px 36px;
   border-radius: 999px;
@@ -109,7 +106,7 @@ body {
   color: var(--accent);
 }
 
-/* IMAGE */
+
 .hero-image img {
   width: 320px;
   max-width: 90vw;
@@ -123,7 +120,7 @@ body {
   100% { transform: translateY(0); }
 }
 
-/* SECTIONS */
+
 .section {
   padding: 70px 20px;
   text-align: center;
@@ -133,7 +130,7 @@ body {
   background: var(--soft);
 }
 
-/* PROJECTS */
+
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
@@ -168,7 +165,6 @@ body {
 .todo { border-top: 4px solid #86efac; }
 .gallery { border-top: 4px solid #fcd34d; }
 
-/* EDUCATION */
 .education-card {
   max-width: 700px;
   margin: auto;
@@ -206,7 +202,6 @@ body {
 }
 
 
-/* SKILLS */
 .skills span {
   display: inline-block;
   margin: 8px;
@@ -215,7 +210,7 @@ body {
   color: white;
   border-radius: 20px;
 }
-/* CONTACT INFO */
+
 .contact-card {
   max-width: 420px;
   margin: auto;
@@ -251,14 +246,14 @@ body {
   font-size: 18px;
 }
 
-/* FOOTER */
+
 footer {
   text-align: center;
   padding: 20px;
   opacity: 0.7;
 }
 
-/* MOBILE */
+
 @media (max-width: 768px) {
   .hero {
     flex-direction: column;
@@ -268,4 +263,5 @@ footer {
 .portfolio {
   border-top: 4px solid #a5b4fc;
 }
+
 
