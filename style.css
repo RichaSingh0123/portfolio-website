@@ -24,6 +24,7 @@ body {
   color: var(--text);
 }
 
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -33,7 +34,7 @@ body {
 
 .logo {
   font-size: 20px;
-  font-weight: bold;
+  font-weight: 700;
   letter-spacing: 2px;
 }
 
@@ -42,6 +43,7 @@ body {
   text-decoration: none;
   color: var(--text);
   font-weight: 500;
+  cursor: pointer;
 }
 
 .nav a:hover {
@@ -75,15 +77,15 @@ body {
   margin: 16px 0;
   line-height: 1.6;
 }
-
 .hero-education {
   font-size: 14px;
   color: var(--accent);
+  opacity: 0.9;
+}
+.hero-buttons {
+  margin-top: 36px; 
 }
 
-.hero-buttons {
-  margin-top: 36px;
-}
 
 .btn {
   padding: 14px 36px;
@@ -104,13 +106,20 @@ body {
   color: var(--accent);
 }
 
+
 .hero-image img {
   width: 320px;
   max-width: 90vw;
-  border-radius: 16px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
-  border: 3px solid var(--card);
+  animation: float 6s ease-in-out infinite;
+  opacity: 0.96;
 }
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-14px); }
+  100% { transform: translateY(0); }
+}
+
 
 .section {
   padding: 70px 20px;
@@ -121,9 +130,10 @@ body {
   background: var(--soft);
 }
 
+
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
   gap: 25px;
   max-width: 1000px;
   margin: auto;
@@ -136,7 +146,7 @@ body {
   text-decoration: none;
   color: inherit;
   text-align: left;
-  transition: 0.2s;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .project-card:hover {
@@ -148,13 +158,12 @@ body {
   display: inline-block;
   margin-top: 12px;
   color: var(--accent);
-  font-weight: bold;
+  font-weight: 600;
 }
 
 .weather { border-top: 4px solid #7dd3fc; }
 .todo { border-top: 4px solid #86efac; }
 .gallery { border-top: 4px solid #fcd34d; }
-.portfolio { border-top: 4px solid #a5b4fc; }
 
 .education-card {
   max-width: 700px;
@@ -168,13 +177,18 @@ body {
   margin-bottom: 28px;
 }
 
+.edu-item:last-child {
+  margin-bottom: 0;
+}
+
 .education-card h3 {
   color: var(--accent);
   margin-bottom: 6px;
 }
 
 .edu-college {
-  font-weight: bold;
+  font-weight: 600;
+  margin-bottom: 4px;
 }
 
 .edu-year {
@@ -186,6 +200,7 @@ body {
 .edu-desc {
   line-height: 1.6;
 }
+
 
 .skills span {
   display: inline-block;
@@ -210,6 +225,11 @@ body {
   align-items: center;
   gap: 14px;
   margin-bottom: 16px;
+  font-size: 16px;
+}
+
+.contact-item:last-child {
+  margin-bottom: 0;
 }
 
 .contact-item a {
@@ -222,11 +242,17 @@ body {
   color: var(--accent);
 }
 
+.contact-icon {
+  font-size: 18px;
+}
+
+
 footer {
   text-align: center;
   padding: 20px;
   opacity: 0.7;
 }
+
 
 @media (max-width: 768px) {
   .hero {
@@ -234,3 +260,8 @@ footer {
     text-align: center;
   }
 }
+.portfolio {
+  border-top: 4px solid #a5b4fc;
+}
+
+
